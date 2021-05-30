@@ -1,0 +1,89 @@
+# $Id$
+#
+# Copyright (c) 1999 Richard Offer. All rights reserved.
+
+
+# BuffyEro - a theme simmilia to Potrero
+
+style "default"
+{
+  font = "-*-helvetica-medium-r-normal--10-*-*-*-*-*-*-*"
+
+  bg[NORMAL] = "#08325c" 
+  fg[NORMAL] = "#ffffff" 
+
+  bg[PRELIGHT] = "#466585" 
+  fg[PRELIGHT] = "#ffffff" 
+
+  bg[ACTIVE] = "#08325c" 
+  fg[ACTIVE] = "#ffffff" 
+
+  bg[INSENSITIVE] = "#08325c" 
+  fg[INSENSITIVE] = "#000000" 
+
+  base[NORMAL] = "#08325c" 
+  base[ACTIVE] = "#08325c" 
+
+  engine "buffy" 
+  {
+	checkColor = "#ff0000"
+	radioColor = "#ffff00"
+  }
+}
+
+style "check" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+
+}
+
+style "button" = "default" {
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	bg[NORMAL] = "#522250" 
+  	fg[NORMAL] = "#ffffff" 
+  	bg[ACTIVE] = "#522250" 
+  	fg[ACTIVE] = "#ffffff" 
+  	bg[PRELIGHT] = "#7d597c" 
+  	fg[PRELIGHT] = "#ffffff" 
+}
+
+style "menu" = "default" {
+	font = "-*-helvetica-bold-o-normal-*-14-*-*-*-*-*-iso8859-1"
+}
+
+style "list" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	fg[NORMAL] = "#ffffff" 
+  	bg[NORMAL] = "#633463" 
+  	base[NORMAL] = "#633463" 
+  	base[ACTIVE] = "#633463" 
+  	bg[SELECTED] = "#ffffff" 
+  	fg[SELECTED] = "#633463" 
+}
+
+style "entry" = "default" {
+
+	font = "-*-screen-medium-r-normal--15-*-*-*-*-*-iso8859-1"
+  
+	bg[NORMAL] = "#105b6d" 
+	fg[NORMAL] = "#ffffff" 
+
+	bg[SELECTED] = "#105b6d" 
+	fg[SELECTED] = "#ffffff" 
+
+}
+# common default
+class "*" style "default"
+widget_class "*GtkButton*" style "button"
+widget_class "*GtkEntry*" style "entry"
+widget_class "*GtkText*" style "entry"
+widget_class "*GtkSpinButton*" style "entry"
+widget_class "*GtkList*" style "list"
+widget_class "*GtkCList*" style "list"
+widget_class "*GtkCTree*" style "list"
+widget_class "*GtkTree*" style "list"
+widget_class "*GtkCheckButton*" style "check"
+widget_class "*Menu*" style "menu"
+widget_class "*MenuItem*" style "menu"
+

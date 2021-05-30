@@ -1,0 +1,102 @@
+# $Id: gtkrc,v 1.1.1.1 1999/06/01 21:35:54 offer Exp $
+#
+# Copyright (c) 1999 Richard Offer. All rights reserved.
+# 
+# This is free software, and by free if mean really free, none of
+# that so called GPL freedom.
+# 
+
+# BuffyNess --- a theme simmiliar to Inverness.
+
+style "default"
+{
+  font = "-*-helvetica-medium-r-normal--10-*-*-*-*-*-*-*"
+
+  bg[NORMAL] = "#857894" 
+  fg[NORMAL] = "#000000" 
+
+  bg[PRELIGHT] = "#bfc0cc" 
+
+  bg[INSENSITIVE] = "#857894" 
+  fg[INSENSITIVE] = "#000000" 
+
+  bg[ACTIVE] = "#857894" 
+
+  base[NORMAL] = "#857894" 
+  base[ACTIVE] = "#857894" 
+
+
+  engine "buffy" 
+  {
+	checkColor = "#ffff07"
+	radioColor = "#ffff02"
+  }
+}
+
+style "check" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+
+}
+
+style "button" = "default" {
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+	bg[NORMAL] = "#7e8099"
+}
+
+style "menu" = "default" {
+	font = "-*-helvetica-bold-o-normal-*-14-*-*-*-*-*-iso8859-1"
+}
+
+style "list" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	fg[NORMAL] = "#000000" 
+  	bg[NORMAL] = "#6f7c8e" 
+  	bg[SELECTED] = "#000000" 
+  	fg[SELECTED] = "#6f7c8e" 
+  	base[NORMAL] = "#677c81" 
+  	bg[SELECTED] = "#000000" 
+  	fg[SELECTED] = "#6f7c8e" 
+}
+
+style "entry" = "default" {
+
+	font = "-*-screen-medium-r-normal--15-*-*-*-*-*-iso8859-1"
+  
+	bg[NORMAL] = "#5e7f66" 
+	bg[INSENSITIVE] = "#5e7f66" 
+	fg[NORMAL] = "#000000" 
+	bg[SELECTED] = "#d4ce78" 
+	fg[SELECTED] = "#000000" 
+
+}
+
+style "text" = "default" {
+
+	font = "-*-screen-medium-r-normal--15-*-*-*-*-*-iso8859-1"
+  
+	bg[NORMAL] = "#6f7c8e" 
+	bg[INSENSITIVE] = "#6f7c8e" 
+	fg[NORMAL] = "#000000" 
+	bg[SELECTED] = "#d4ce78" 
+	fg[SELECTED] = "#000000" 
+
+}
+
+
+
+# common default
+class "*" style "default"
+widget_class "*GtkButton*" style "button"
+widget_class "*GtkEntry*" style "entry"
+widget_class "*GtkText*" style "text"
+widget_class "*GtkSpinButton*" style "entry"
+widget_class "*GtkList*" style "list"
+widget_class "*GtkTree*" style "list"
+widget_class "*GtkCList*" style "list"
+widget_class "*GtkCTree*" style "list"
+widget_class "*GtkCheckButton*" style "check"
+widget_class "*Menu*" style "menu"
+widget_class "*MenuItem*" style "menu"
+

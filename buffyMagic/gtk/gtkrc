@@ -1,0 +1,87 @@
+# pixmap_path "<dir 1>:<dir 2>:<dir 3>:..."
+#
+# include "rc-file"
+#
+# style <name> [= <name>]
+# {
+#   <option>
+# }
+#
+# widget <widget_set> style <style_name>
+# widget_class <widget_class_set> style <style_name>
+
+
+style "default"
+{
+  font = "-*-helvetica-medium-r-normal--10-*-*-*-*-*-*-*"
+
+  bg[NORMAL] = "#999999" 
+  fg[NORMAL] = "#000000" 
+
+  bg[PRELIGHT] = "#cccccc" 
+
+  bg[ACTIVE] = "#999999" 
+
+  bg[INSENSITIVE] = "#999999" 
+  fg[INSENSITIVE] = "#000000" 
+
+  base[NORMAL] = "#cccccc" 
+  base[ACTIVE] = "#cccccc" 
+
+  engine "buffy" 
+  {
+	checkColor = "#ff0000"
+	radioColor = "#0000ff"
+  }
+}
+
+style "check" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+
+}
+
+style "button" = "default" {
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+}
+
+style "menu" = "default" {
+	font = "-*-helvetica-bold-o-normal-*-14-*-*-*-*-*-iso8859-1"
+}
+
+style "list" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	fg[NORMAL] = "#000000" 
+  	bg[NORMAL] = "#999999" 
+  	base[NORMAL] = "#999999" 
+  	base[ACTIVE] = "#999999" 
+  	bg[SELECTED] = "#000000" 
+  	fg[SELECTED] = "#999999" 
+}
+
+style "entry" = "default" {
+
+	font = "-*-screen-medium-r-normal--15-*-*-*-*-*-iso8859-1"
+  
+	bg[NORMAL] = "#d3b5b5" 
+	fg[NORMAL] = "#000000" 
+
+	bg[SELECTED] = "#e6e6e6" 
+	fg[SELECTED] = "#000000" 
+
+}
+# common default
+class "*" style "default"
+widget_class "*GtkButton*" style "button"
+widget_class "*GtkEntry*" style "entry"
+widget_class "*GtkText*" style "entry"
+widget_class "*GtkSpinButton*" style "entry"
+widget_class "*GtkList*" style "list"
+widget_class "*GtkCList*" style "list"
+widget_class "*GtkCTree*" style "list"
+widget_class "*GtkTree*" style "list"
+widget_class "*GtkCheckButton*" style "check"
+widget_class "*Menu*" style "menu"
+widget_class "*MenuItem*" style "menu"
+

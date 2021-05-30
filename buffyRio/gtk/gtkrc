@@ -1,0 +1,105 @@
+# $Id$
+#
+# Copyright (c) 1999 Richard Offer. All rights reserved.
+
+
+# BuffyRio - a theme simmilia to Rio
+
+style "default"
+{
+  font = "-*-helvetica-medium-r-normal--10-*-*-*-*-*-*-*"
+
+  bg[NORMAL] = "#083968" 
+  fg[NORMAL] = "#ffffff" 
+
+  bg[PRELIGHT] = "#4c7fb3" 
+  fg[PRELIGHT] = "#ffffff" 
+
+  bg[ACTIVE] = "#083968" 
+  fg[ACTIVE] = "#ffffff" 
+
+  bg[INSENSITIVE] = "#083968" 
+  fg[INSENSITIVE] = "#000000" 
+
+  base[NORMAL] = "#083968" 
+  base[ACTIVE] = "#083968" 
+
+  engine "buffy" 
+  {
+	checkColor = "#ff0000"
+	radioColor = "#ffff00"
+  }
+}
+
+style "check" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+
+}
+
+style "scrollbar" = "default" {
+
+  	bg[NORMAL] = "#10559a" 
+}
+
+style "drawingarea" = "default" {
+
+  	bg[NORMAL] = "#d15400" 
+  	base[NORMAL] = "#d15400" 
+}
+
+style "button" = "default" {
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	bg[NORMAL] = "#8b3988" 
+  	fg[NORMAL] = "#ffffff" 
+  	bg[ACTIVE] = "#8b3988" 
+  	fg[ACTIVE] = "#ffffff" 
+  	bg[PRELIGHT] = "#a66aa5" 
+  	fg[PRELIGHT] = "#ffffff" 
+}
+
+style "menu" = "default" {
+	font = "-*-helvetica-bold-o-normal-*-14-*-*-*-*-*-iso8859-1"
+}
+
+style "list" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	fg[NORMAL] = "#ffffff" 
+  	bg[NORMAL] = "#1c6412" 
+  	base[NORMAL] = "#1c6412" 
+  	base[ACTIVE] = "#1c6412" 
+  	bg[SELECTED] = "#ffffff" 
+  	fg[SELECTED] = "#1c6412" 
+}
+
+style "entry" = "default" {
+
+	font = "-*-screen-medium-r-normal--15-*-*-*-*-*-iso8859-1"
+  
+	bg[NORMAL] = "#0b4e00" 
+	fg[NORMAL] = "#ffffff" 
+
+	fg[SELECTED] = "#0b4e00" 
+	bg[SELECTED] = "#ffffff" 
+
+}
+# common default
+class "*" style "default"
+widget_class "*GtkButton*" style "button"
+widget_class "*GtkDrawingArea*" style "drawingarea"
+widget_class "*GtkHScale*" style "scrollbar"
+widget_class "*GtkVScale*" style "scrollbar"
+widget_class "*GtkVScroll*" style "scrollbar"
+widget_class "*GtkHScroll*" style "scrollbar"
+widget_class "*GtkEntry*" style "entry"
+widget_class "*GtkText*" style "entry"
+widget_class "*GtkSpinButton*" style "entry"
+widget_class "*GtkList*" style "list"
+widget_class "*GtkCList*" style "list"
+widget_class "*GtkCTree*" style "list"
+widget_class "*GtkTree*" style "list"
+widget_class "*GtkCheckButton*" style "check"
+widget_class "*Menu*" style "menu"
+widget_class "*MenuItem*" style "menu"
+

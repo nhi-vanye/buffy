@@ -1,0 +1,70 @@
+This is the README to accompany the Buffy theme engine for GTK+
+
+
+Buffy is meant to be a facsimile for the SGI Motif UI (also known
+as Buffed Motif).
+
+Buffed Motif comprises a lot of Motif widget re-writing to change
+the UI look and feel, and a number of color schemes. Buffy comprises
+a theme engine and a few selected color schemes (not all the SGI
+ones have been converted---because I'm lazy).
+
+While I work for SGI, this is not a SGI product, and there is no SGI IP
+here, the engine was written simply by inspecting the pixels that were
+being drawn on screen (oglsnoop is your friend). In fact if you have
+the impression that by looking at this code that Buffed Motif is simple
+then I've succeded in fooling you... But to cover by butt, here's the
+standard disclaimer...
+
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL 
+ * Richard Offer, or Silicon Graphics Inc. BE LIABLE FOR ANY CLAIM, 
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE 
+ * USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * 
+ * 
+ * Except as contained in this notice, the name of Richard Offer, or Silicon 
+ * Graphics shall not be used in advertising or otherwise to promote the sale, 
+ * use or other dealings in this Software without prior written authorization 
+ * from both Richard Offer and Silicon Graphics Inc.
+ * 
+
+
+
+As I said earlier, this is a facsimilie for the real SGI look and
+feel, this is mainly a limitation of the current GTK+ theme engine
+APIs and infact the whole GTK+ toolkit [1].
+
+The following themes are reproduced here :-
+
+	SGI Scheme				Buffy Theme
+
+	Portrero            buffyEro
+	Mendocino           buffyIno
+	Indigo Magic        buffyMagic
+	Inverness           buffyNess
+	Rio                 buffyRio
+
+
+[1] or my understanding of it.
+
+
+Richard Offer <offer@sgi.com> <richard@whitequeen.com>
+-- 
+$Id: README,v 1.2 1999/06/04 19:08:56 offer Exp $
+Copyright (c) 1999 Richard Offer. All rights reserved.
+
+

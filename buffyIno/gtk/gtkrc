@@ -1,0 +1,89 @@
+# $Id$
+#
+# Copyright (c) 1999 Richard Offer. All rights reserved.
+
+
+# BuffyEro - a theme simmilia to Mendocino
+
+style "default"
+{
+  font = "-*-helvetica-medium-r-normal--10-*-*-*-*-*-*-*"
+
+  bg[NORMAL] = "#30494f" 
+  fg[NORMAL] = "#ffffff" 
+
+  bg[PRELIGHT] = "#64767b" 
+  fg[PRELIGHT] = "#ffffff" 
+
+  bg[ACTIVE] = "#30494f" 
+  fg[ACTIVE] = "#ffffff" 
+
+  bg[INSENSITIVE] = "#30494f" 
+  fg[INSENSITIVE] = "#000000" 
+
+  base[NORMAL] = "#30494f" 
+  base[ACTIVE] = "#30494f" 
+
+  engine "buffy" 
+  {
+	checkColor = "#ff0000"
+	radioColor = "#ffff00"
+  }
+}
+
+style "check" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+
+}
+
+style "button" = "default" {
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	bg[NORMAL] = "#593927" 
+  	fg[NORMAL] = "#ffffff" 
+  	bg[ACTIVE] = "#593927" 
+  	fg[ACTIVE] = "#ffffff" 
+  	bg[PRELIGHT] = "#966160" 
+  	fg[PRELIGHT] = "#ffffff" 
+}
+
+style "menu" = "default" {
+	font = "-*-helvetica-bold-o-normal-*-14-*-*-*-*-*-iso8859-1"
+}
+
+style "list" = "default" {
+
+	font = "-*-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1"
+  	fg[NORMAL] = "#ffffff" 
+  	bg[NORMAL] = "#593927" 
+  	base[NORMAL] = "#593927" 
+  	base[ACTIVE] = "#593927" 
+  	bg[SELECTED] = "#ffffff" 
+  	fg[SELECTED] = "#593927" 
+}
+
+style "entry" = "default" {
+
+	font = "-*-screen-medium-r-normal--15-*-*-*-*-*-iso8859-1"
+  
+	bg[NORMAL] = "#103137" 
+	fg[NORMAL] = "#ffffff" 
+
+	bg[SELECTED] = "#103137" 
+	fg[SELECTED] = "#ffffff" 
+
+}
+# common default
+class "*" style "default"
+widget_class "*GtkButton*" style "button"
+widget_class "*GtkEntry*" style "entry"
+widget_class "*GtkText*" style "entry"
+widget_class "*GtkSpinButton*" style "entry"
+widget_class "*GtkList*" style "list"
+widget_class "*GtkCList*" style "list"
+widget_class "*GtkCTree*" style "list"
+widget_class "*GtkTree*" style "list"
+widget_class "*GtkCheckButton*" style "check"
+widget_class "*Menu*" style "menu"
+widget_class "*MenuItem*" style "menu"
+

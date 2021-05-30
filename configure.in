@@ -1,0 +1,43 @@
+AC_INIT(README)
+AM_INIT_AUTOMAKE(buffy, 0.2)
+
+if test "x$enable_static" != "xyes"; then
+  enable_static=no
+fi
+
+if test "x$enable_shared" != "xno"; then
+  enable_shared=yes
+fi
+
+# Checks for programs.
+AC_PROG_CC
+AM_PROG_CC_STDC
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+
+dnl Initialize libtool
+AM_PROG_LIBTOOL
+
+AM_PATH_GTK(1.2.0, , 
+	AC_MSG_ERROR([*** GTK 1.2 not installed - please install first ***]))
+
+# We don't want to put GTK+ back into the shlibdeps, because that
+# could cause the _wrong_ version of GTK+ to be pulled in.
+GDK_IMLIB_LIBS=`echo $GDK_IMLIB_LIBS | sed -e 's/-lgdk / /' -e 's/-lgtk//' -e 's/-lglib//'`
+
+# Checks for header files.
+AC_HEADER_STDC
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+
+# Checks for endianness (needed by GdkRgb).
+AC_C_BIGENDIAN
+
+AC_OUTPUT([Makefile gtk-engine/Makefile 
+	buffyMagic/Makefile buffyMagic/gtk/Makefile 
+	buffyNess/Makefile buffyNess/gtk/Makefile
+	buffyEro/Makefile buffyEro/gtk/Makefile
+	buffyIno/Makefile buffyIno/gtk/Makefile
+	buffyRio/Makefile buffyRio/gtk/Makefile
+])
